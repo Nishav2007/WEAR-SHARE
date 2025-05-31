@@ -129,6 +129,8 @@
                     📝 Fill the Donation Form
                 </a>
             </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="main-footer">
@@ -171,34 +173,7 @@
         </div>
     </footer>
 
-    <!-- QR Code Modal -->
-    <div id="qrModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeQRModal()">&times;</span>
-            <img src="images/qr.jpg" alt="Enlarged QR Code" class="enlarged-qr">
-        </div>
-    </div>
-
     <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
-    <script>
-        // QR Code Modal functionality
-        const modal = document.getElementById('qrModal');
-        
-        function openQRModal() {
-            modal.style.display = "flex";
-        }
-        
-        function closeQRModal() {
-            modal.style.display = "none";
-        }
-        
-        // Close modal when clicking outside
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                closeQRModal();
-            }
-        }
-    </script>
 </body>
 </html> 
