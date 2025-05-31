@@ -1,0 +1,291 @@
+/* Page Header */
+.page-header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 8rem 0 4rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Volunteer Section */
+.volunteer-section {
+    padding: 4rem 0;
+    background-color: var(--light-bg);
+}
+
+/* Message Card */
+.message-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: 3rem;
+    margin-bottom: 4rem;
+}
+
+.main-message {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin: 0 0 2rem 0;
+    padding: 0;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 2rem;
+}
+
+.mission-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+.mission-highlight {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    text-align: center;
+    font-weight: 500;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: var(--light-bg);
+    border-radius: var(--border-radius-md);
+}
+
+/* Opportunities Section */
+.opportunities-section {
+    margin: 4rem 0;
+}
+
+.opportunities-section h2 {
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 3rem;
+}
+
+.opportunities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+/* Style for the bottom two centered cards */
+.center-card {
+    width: 300px;
+    height: 200px; /* Match height with other cards */
+}
+
+.opportunity-card:nth-child(4) {
+    grid-column: 1 / span 3;
+    justify-self: end;
+    margin-right: calc(50% + 1rem);
+    margin-top: 1rem; /* Add some space between rows */
+}
+
+.opportunity-card:nth-child(5) {
+    grid-column: 1 / span 3;
+    justify-self: start;
+    margin-left: calc(50% + 1rem);
+    margin-top: calc(-200px - 2rem); /* Adjust based on card height */
+}
+
+.opportunity-card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    transition: transform var(--transition-base);
+    height: 200px; /* Set fixed height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.opportunity-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.opportunity-card h3 {
+    color: var(--text-color);
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+}
+
+.opportunity-card p {
+    color: var(--text-light);
+    line-height: 1.4;
+    margin: 0;
+    font-size: 0.95rem;
+    max-width: 200px; /* Limit text width */
+}
+
+/* Inclusive Message */
+.inclusive-message {
+    text-align: center;
+    padding: 3rem;
+    background-color: var(--white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    margin: 4rem 0;
+}
+
+.inclusive-message p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* CTA Section */
+.cta-section {
+    text-align: center;
+    padding: 4rem 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-section h2 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: var(--border-radius-md);
+    font-weight: 500;
+    transition: background-color var(--transition-base);
+}
+
+.cta-button:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .opportunities-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .center-card {
+        width: 100%;
+    }
+    
+    .opportunity-card:nth-child(4),
+    .opportunity-card:nth-child(5) {
+        grid-column: span 1;
+        margin: 0;
+        justify-self: auto;
+    }
+    
+    .opportunity-card:nth-child(5) {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        padding: 7rem 0 3rem;
+    }
+
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .message-card {
+        padding: 2rem;
+    }
+
+    .main-message {
+        font-size: 1.1rem;
+        padding-left: 1.5rem;
+    }
+
+    .mission-text {
+        font-size: 1rem;
+    }
+
+    .mission-highlight {
+        font-size: 1.1rem;
+        padding: 1.25rem;
+    }
+
+    .opportunities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .opportunity-card {
+        height: auto;
+        min-height: 180px;
+        padding: 1.5rem;
+    }
+
+    .opportunity-card h3 {
+        font-size: 1.1rem;
+    }
+    
+    .opportunity-card p {
+        font-size: 0.9rem;
+        max-width: 250px;
+    }
+
+    .inclusive-message {
+        padding: 2rem;
+    }
+
+    .inclusive-message p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-header {
+        padding: 6rem 0 2.5rem;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .message-card {
+        padding: 1.5rem;
+    }
+
+    .main-message {
+        font-size: 1rem;
+        padding-left: 1rem;
+    }
+
+    .opportunity-card {
+        padding: 1.25rem;
+    }
+
+    .cta-button {
+        width: 100%;
+    }
+} 
